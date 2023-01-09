@@ -43,7 +43,7 @@ Link to hosted site : https://thomasptharakan.github.io/TBC/
 
 2. Open index.html in a browser
 
-![ScreenShot](/images/screen.PNG)
+![ScreenShot](/images/screen.png)
 
 
 
