@@ -109,7 +109,7 @@ function getPasswordOptions() {
   do{
     var pwdLength = prompt ('Enter the password length required. Range between 10 and 64')
     //check for a number entry
-    if (!(isNaN(pwdLength))){
+    if ((!(isNaN(pwdLength))) && (pwdLength!='')   ){
       userSelection.passwordLength = parseInt(pwdLength);  
     }
   }while((userSelection.passwordLength < 10 ) || (userSelection.passwordLength > 64));
