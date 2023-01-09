@@ -11,6 +11,8 @@ This repository ("password-generator") contains the code for showcasing some bas
    * Uppercase
    * Numeric
    * Special characters ($@%&*, etc)
+   * Code will validate for each input and at least one character type must be selected
+  * Once prompts are answered then the password is generated and written to the page
 
 The Website is built using html,css and javascript
 
