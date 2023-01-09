@@ -112,11 +112,11 @@ function getPasswordOptions() {
     if (!(isNaN(pwdLength))){
       userSelection.passwordLength = parseInt(pwdLength);  
     }
-  }while((userSelection.passwordLength < 9 ) || (userSelection.passwordLength > 64));
+  }while((userSelection.passwordLength < 10 ) || (userSelection.passwordLength > 64));
   
-  //Prompt user till atleast one criteria must be selected
+  //Prompt user till atleast one criteria is selected
   do {
-    alert('Select atleast one of the following -- lowerCase, UpperCase, numeric Characters or special Characters');
+    alert('Select atleast one of the following \n -- Lower Case, Upper Case, Numeric Characters or Special Characters -- ');
     userSelection.lowerCase = confirm ('Would you like lowercase Characters ? Default is No.');
     userSelection.upperCase = confirm ('Would you like uppercase Characters ? Default is No.');
     userSelection.numericCharacters = confirm (' Would you like numberic characters ? Default is No.');
@@ -153,7 +153,7 @@ function calculateRandomCharCount() {
   if (userSelection.lowerCase){
     var randomCharCount = 0;
     randomCharCount = Math.floor((Math.random() * totalCharCount)+1);
-    alert(`Random number from 1 to ${totalCharCount} is ${randomCharCount}`);
+    //alert(`Random number from 1 to ${totalCharCount} is ${randomCharCount}`);
     userSelection.lowerCaseCharCount = userSelection.lowerCaseCharCount + randomCharCount;
     totalCharCount = totalCharCount - randomCharCount;
    }
@@ -162,7 +162,7 @@ function calculateRandomCharCount() {
   if ((userSelection.upperCase)&&(totalCharCount>0)){
     var randomCharCount = 0;
     randomCharCount = Math.floor((Math.random() * totalCharCount)+1);
-    alert(`Random number from 1 to ${totalCharCount} is ${randomCharCount}`);
+    //alert(`Random number from 1 to ${totalCharCount} is ${randomCharCount}`);
     userSelection.upperCaseCharCount = userSelection.upperCaseCharCount + randomCharCount;
     totalCharCount = totalCharCount - randomCharCount;
   }
@@ -171,7 +171,7 @@ function calculateRandomCharCount() {
   if ((userSelection.specialCharacters)&&(totalCharCount>0)){
     var randomCharCount = 0;
     randomCharCount = Math.floor((Math.random() * totalCharCount)+1);
-    alert(`Random number from 1 to ${totalCharCount} is ${randomCharCount}`);
+    //alert(`Random number from 1 to ${totalCharCount} is ${randomCharCount}`);
     userSelection.specialCharCount = userSelection.specialCharCount + randomCharCount;
     totalCharCount = totalCharCount - randomCharCount;
   }
@@ -181,7 +181,7 @@ function calculateRandomCharCount() {
     userSelection.numericCharCount = userSelection.numericCharCount + totalCharCount;
     totalCharCount = totalCharCount - userSelection.numericCharCount;
   }
-alert (`Remaining Count : ${totalCharCount}`);
+//alert (`Remaining Count : ${totalCharCount}`);
 }while(totalCharCount>0);
 
 }
@@ -207,7 +207,7 @@ console.log(userSelection);
   for (i=1;i<userSelection.passwordLength+1;i++){
     //generate a random number to select random criteria from 1 - 4
     randomCharCount = Math.floor((Math.random() * 4));
-alert(`Random Selection at position ${i} is ${randomCharCount}`) ;   
+//alert(`Random Selection at position ${i} is ${randomCharCount}`) ;   
     switch (randomCharCount) {
       case 1://lowerCase characters
         if (userSelection.lowerCaseCharCount > 0){
