@@ -196,6 +196,17 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+ //intialise Variables
+  userSelection.passwordLength = 0;
+  userSelection.lowerCase = false;
+  userSelection.lowerCaseCharCount = 0;
+  userSelection.upperCase = false;
+  userSelection.upperCaseCharCount = 0;
+  userSelection.numericCharacters = false;
+  userSelection.numericCharCount = 0;
+  userSelection.specialCharacters = false;
+  userSelection.specialCharCount = 0;
+
   //Prompt for user criteria selection 
   getPasswordOptions();
   var pwd = '';
@@ -251,6 +262,7 @@ console.log(userSelection);
   console.log(pwd);
  return pwd;
 }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
